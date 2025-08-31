@@ -2,15 +2,15 @@
 	display: inline-flex;
 	align-items: center;
 	color: inherit;
-	text-decoration: none;
 	text-transform: uppercase;
+	text-decoration: none;
 
 	&::before {
 		content: '';
 		display: block;
-		width: 30px;
-		height: 30px;
-		margin-right: var(--indent);
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
 		background-image: linear-gradient(135deg, #3e1f05, #6a4e26, #c29c63, #d4b383);
 		mask-position: center;
 		mask-size: contain;

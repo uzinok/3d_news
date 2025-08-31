@@ -1,0 +1,34 @@
+.gallery__container {
+	position: relative;
+}
+
+.gallery__animation-rotate {
+	top: -150px;
+	right: -150px;
+	position: absolute;
+	width: 350px;
+	height: 350px;
+
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+.gallery__list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+	gap: var(--indent);
+
+	& img {
+		transition: filter 0.25s ease-in-out;
+		filter: grayscale(50%);
+
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+}

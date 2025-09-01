@@ -49,10 +49,20 @@
 		</section>
 		<div class="popup">
 			<div class="popup__container container">
-				<form action="#" class="popup__form"></form>
+				<button type="button" class="popup__close close" onclick="document.querySelector('.popup').remove()">
+					<span class="visually-hidden">Закрыть</span>
+				</button>
+				<form action="#" class="popup__form form">
+					<h2 class="form__title title">Заказать звонок</h2>
+					<input type="text" name="name" id="name" class="input" placeholder="Ваше имя">
+					<input type="text" name="contact" id="contact" class="input" placeholder="Куда ответить">
+					<textarea name="comments" id="comments" class="input textarea" placeholder="Опишите желаемую модель"></textarea>
+					<button type="submit" class="form__button button">Отправить</button>
+				</form>
 			</div>
 		</div>
 	</main>
+	<footer class="footer">© 2025</footer>
 	<!-- background-image: linear-gradient(135deg, #3e1f05, #6a4e26, #c29c63, #d4b383); -->
 </body>
 

@@ -3,9 +3,9 @@
 }
 
 .gallery__animation-rotate {
+	position: absolute;
 	top: -150px;
 	right: -150px;
-	position: absolute;
 	width: 350px;
 	height: 350px;
 
@@ -15,20 +15,30 @@
 }
 
 .gallery__list {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	justify-content: center;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
 	gap: var(--indent);
 
-	& img {
-		transition: filter 0.25s ease-in-out;
-		filter: grayscale(50%);
+	& li {
+		border: 1px solid currentColor;
+	}
 
-		&:hover {
-			filter: grayscale(0);
+	& img {
+		width: 300px;
+		height: 340px;
+		object-position: center;
+
+		@media (min-width: 990px) {
+			filter: grayscale(75%);
+			transition: filter 0.25s ease-in-out;
+
+			&:hover {
+				filter: grayscale(0);
+			}
 		}
 	}
 }

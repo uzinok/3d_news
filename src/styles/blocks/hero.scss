@@ -29,12 +29,20 @@
 		position: absolute;
 		right: 0;
 		bottom: var(--indent);
-		width: 55%;
+		width: 50%;
 		height: calc(100% - var(--indent));
 		background-image: url(../../img/hero-img.png);
 		background-repeat: no-repeat;
 		background-position: right bottom;
 		background-size: contain;
+
+		@media (min-width: 600px) {
+			width: 55%;
+
+			@media (max-width: 1000px) {
+				background-position: center bottom;
+			}
+		}
 	}
 }
 

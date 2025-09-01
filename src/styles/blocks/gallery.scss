@@ -6,8 +6,8 @@
 	position: absolute;
 	top: -150px;
 	right: -150px;
-	width: 350px;
-	height: 350px;
+	width: 300px;
+	height: 300px;
 
 	@media (max-width: 768px) {
 		display: none;
@@ -21,6 +21,7 @@
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+	justify-items: center;
 	gap: var(--indent);
 
 	& li {
@@ -28,6 +29,7 @@
 	}
 
 	& img {
+		display: block;
 		width: 300px;
 		height: 340px;
 		object-position: center;
